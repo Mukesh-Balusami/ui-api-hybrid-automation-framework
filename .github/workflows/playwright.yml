@@ -16,7 +16,7 @@ jobs:
     env:
       UI_BASE_URL: https://mini-app-rep-git-87c73e-mukeshkumarbalusamioutlookcoms-projects.vercel.app
       API_BASE_URL: https://miniapp-repo-staging.onrender.com/api/v1/notes
-      VERCEL_AUTOMATION_BYPASS_SECRET: ${{ secrets.VERCEL_BYPASS_SECRET }}
+      VERCEL_AUTOMATION_BYPASS_SECRET: ${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}
 
     steps:
       - uses: actions/checkout@v4
