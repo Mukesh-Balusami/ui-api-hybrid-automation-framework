@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      UI_BASE_URL: https://mini-app-repo-i0ky40u6o-mukeshkumarbalusamioutlookcoms-projects.vercel.app/
+      UI_BASE_URL: https://mini-app-rep-git-87c73e-mukeshkumarbalusamioutlookcoms-projects.vercel.app
       API_BASE_URL: https://miniapp-repo-staging.onrender.com/api/v1/notes
 
     steps:
