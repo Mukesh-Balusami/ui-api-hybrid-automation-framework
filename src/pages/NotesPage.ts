@@ -49,4 +49,5 @@ export class NotesPage {
     response.url().includes('/api/v1/notes') &&
     response.status() === 200
   );
+  }
 }
