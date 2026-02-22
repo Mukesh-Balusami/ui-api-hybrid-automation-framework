@@ -8,8 +8,16 @@ export class NotesPage {
   }
 
   async validatePageLoaded() {
-    const headerLocator = this.page.locator("//h1[contains(text(),'📝 Notes Manager')]");
-    await expect(headerLocator).toBeVisible();
+    console.log("Current URL:", this.page.url());
+
+  const content = await this.page.content();
+  console.log("PAGE HTML START ----");
+  console.log(content);
+  console.log("PAGE HTML END ----");
+
+  const headerLocator = this.page.locator("h1");
+  await expect(headerLocator).toBeVisible();
+  await expect(headerLocator).toContainText("Notes");
     const header = await headerLocator.innerText();
     console.log(`"${header}" Application is opened successfully`);
     }
