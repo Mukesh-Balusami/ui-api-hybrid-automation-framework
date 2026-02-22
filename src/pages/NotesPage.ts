@@ -37,11 +37,16 @@ export class NotesPage {
 
   async verifyNoteExists(heading: string) {
     await expect(
-        this.page.locator(`text=${heading}`)
-    ).toBeVisible();;    
+      this.page.getByText(heading, { exact: false })
+    ).toBeVisible({ timeout: 10000 }); 
   }
 
   async refreshPage() {
     await this.page.reload();
-    }
+
+  // Wait for API response
+  await this.page.waitForResponse(response =>
+    response.url().includes('/api/v1/notes') &&
+    response.status() === 200
+  );
 }
