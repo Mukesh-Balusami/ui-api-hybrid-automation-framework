@@ -13,7 +13,7 @@ test('Create new note', async ({ notesPage }) => {
   await notesPage.verifyNoteExists(note.heading);
 });
 
-test.only('UI should show note created via API', async ({ notesPage }) => {
+test('UI should show note created via API', async ({ notesPage }) => {
   const note = generateRandomNoteData();
 
   // Create via API
